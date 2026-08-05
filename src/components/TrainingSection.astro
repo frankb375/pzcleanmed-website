@@ -1,0 +1,94 @@
+---
+import wildernessMedicine from '../assets/wilderness-medicine.jpg';
+import redCrossTraining from '../assets/red-cross-training.png';
+import tacticalMedicine from '../assets/tactical-medicine.jpg';
+import occupationalHealth from '../assets/occupational-health-medicine.jpg';
+import customTraining from '../assets/custom-training-medicine.jpg';
+---
+
+<section class="training" id="training">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p>Training Programs</p>
+      <h2>Practical Skills. Real-World Ready.</h2>
+    </div>
+
+    <div class="training-grid">
+      <article class="training-card">
+        <div
+          class="training-image"
+          style={`background-image: url(${redCrossTraining.src});`}
+        ></div>
+        <div class="training-content">
+          <h3>American Red Cross</h3>
+          <p class="course-list">CPR &bull; First Aid &bull; AED &bull; BLS</p>
+          <p>
+            Essential life-saving skills for businesses, healthcare
+            professionals, schools, and community organizations.
+          </p>
+          <a href="#">Explore Courses &rarr;</a>
+        </div>
+      </article>
+
+      <article class="training-card">
+        <div
+          class="training-image"
+          style={`background-image: url(${wildernessMedicine.src});`}
+        ></div>
+        <div class="training-content">
+          <h3>Wilderness Medicine</h3>
+          <p>
+            Practical medical training for remote, austere, and outdoor
+            environments.
+          </p>
+          <a href="#">Explore Courses &rarr;</a>
+        </div>
+      </article>
+
+      <article class="training-card">
+        <div
+          class="training-image"
+          style={`background-image: url(${tacticalMedicine.src});`}
+        ></div>
+        <div class="training-content">
+          <h3>Tactical Medicine</h3>
+          <p>
+            Evidence-based medical training for high-risk and dynamic
+            environments.
+          </p>
+          <a href="#">Explore Courses &rarr;</a>
+        </div>
+      </article>
+
+      <article class="training-card">
+        <div
+          class="training-image"
+          style={`background-image: url(${occupationalHealth.src});`}
+        ></div>
+        <div class="training-content">
+          <h3>Occupational Health</h3>
+          <p>
+            Workplace safety, injury prevention, and emergency preparedness
+            training.
+          </p>
+          <a href="#">Explore Services &rarr;</a>
+        </div>
+      </article>
+
+      <article class="training-card">
+        <div
+          class="training-image"
+          style={`background-image: url(${customTraining.src});`}
+        ></div>
+        <div class="training-content">
+          <h3>Custom Training</h3>
+          <p>
+            Tailored medical education and scenario-based training designed
+            around your organization.
+          </p>
+          <a href="#">Build a Course &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

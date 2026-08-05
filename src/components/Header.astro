@@ -1,8 +1,25 @@
----
-import Header from '../components/Header.astro';
-import wildernessMedicine from '../assets/wilderness-medicine.jpg';
-import redCrossTraining from '../assets/red-cross-training.png';
-import tacticalMedicine from '../assets/tactical-medicine.jpg';
-import occupationalHealth from '../assets/occupational-health-medicine.jpg';
-import customTraining from '../assets/custom-training-medicine.jpg';
----
+<header>
+  <nav>
+    <a class="brand" href="/">
+      <span class="brand-name">PZ CLEAN</span>
+      <span class="brand-subtitle">
+        Medical Training & Emergency Preparedness
+      </span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/#training">Training</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <a
+      class="nav-button"
+      href="mailto:frank@pzcleanmed.com?subject=Training%20Inquiry"
+    >
+      Schedule Training
+    </a>
+  </nav>
+</header>
