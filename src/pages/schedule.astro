@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+
+<Header />
+
+<main class="interior-page">
+  <section class="interior-hero">
+    <p class="page-label">Schedule Training</p>
+    <h1>Find a Class or Request Private Training</h1>
+    <p>
+      Public course dates, private group training, and custom course requests
+      will be available here.
+    </p>
+  </section>
+</main>
+
+<style>
+  .interior-page {
+    min-height: 70vh;
+  }
+
+  .interior-hero {
+    padding: 110px 24px;
+    color: #ffffff;
+    background: #0a2236;
+  }
+
+  .interior-hero > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-label {
+    margin-bottom: 14px;
+    color: #b9cbbd;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .interior-hero h1 {
+    margin-bottom: 24px;
+  }
+
+  .interior-hero p:last-child {
+    max-width: 700px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+</style>

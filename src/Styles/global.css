@@ -39,9 +39,9 @@ header {
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 20px 24px 20px 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,6 +90,11 @@ nav {
 .nav-links a.active {
   border-bottom: 3px solid var(--orange);
 }
+.nav-links {
+  display: flex;
+  gap: 34px;
+  margin-left: auto;
+}
 
 /* ===== BUTTONS ===== */
 
@@ -107,6 +112,7 @@ nav {
   background: var(--orange);
   color: var(--white);
   transition: all 0.25s ease;
+  
 }
 
 .nav-button:hover,
@@ -123,57 +129,85 @@ nav {
 /* ===== HERO ===== */
 
 .hero {
-  min-height: 620px;
+  min-height: 720px;
   display: flex;
   align-items: center;
   color: var(--white);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 23, 37, 0.96) 0%,
-      rgba(5, 23, 37, 0.78) 45%,
-      rgba(5, 23, 37, 0.25) 100%
-    ),
-    var(--navy-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-inner {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto 0 0;
-  padding: 100px 24px;
+  max-width: 760px;
+  margin: 0;
+  padding: 110px 60px;
 }
 
 .eyebrow {
-  margin: 0 0 18px;
-  color: #d7e2e9;
-  font-size: 0.85rem;
+  margin: 0 0 22px;
+  color: var(--orange);
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-h1 {
-  max-width: 760px;
+.hero h1 {
+  max-width: 720px;
   margin: 0;
-  font-size: clamp(3rem, 6vw, 5.4rem);
-  line-height: 1.02;
+  color: var(--white);
+  font-size: clamp(3.7rem, 6vw, 6rem);
+  line-height: 0.98;
   letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.hero-divider {
+  width: 145px;
+  height: 4px;
+  margin: 30px 0 24px;
+  background: linear-gradient(
+    90deg,
+    var(--orange) 0%,
+    var(--orange) 65%,
+    rgba(233, 119, 22, 0) 100%
+  );
+}
+
+.hero-tagline {
+  margin: 0;
+  color: var(--orange);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .hero-copy {
-  max-width: 660px;
-  margin: 28px 0 0;
+  max-width: 590px;
+  margin: 24px 0 0;
   color: #eef3f6;
-  font-size: 1.2rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.65;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 34px;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.hero .primary-button,
+.hero .secondary-button {
+  min-width: 210px;
+  text-align: center;
+}
+
+.hero .secondary-button {
+  background: rgba(5, 23, 37, 0.25);
+  backdrop-filter: blur(3px);
 }
 
 /* ===== SHARED SECTIONS ===== */
@@ -363,22 +397,105 @@ h1 {
 
 /* ===== MOBILE ===== */
 
+.hero {
+  min-height: 620px;
+  background-position: 65% center;
+}
+
+.hero-inner {
+  padding: 80px 24px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 14vw, 4.5rem);
+}
+
+.hero-actions {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero .primary-button,
+.hero .secondary-button {
+  width: 100%;
+  max-width: 320px;
+}
+/* ===== WHY CHOOSE PZ CLEAN ===== */
+
+.why-choose {
+  padding: 90px 24px;
+  background: var(--cream);
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-choose-grid article {
+  padding: 28px;
+  border-top: 4px solid var(--orange);
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(15, 47, 74, 0.08);
+}
+
+.why-choose-grid h3 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.why-choose-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 @media (max-width: 850px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-inner {
-    padding: 80px 24px;
-  }
-
-  .audience-grid,
-  .training-grid,
-  .philosophy-grid {
+  .why-choose-grid {
     grid-template-columns: 1fr;
   }
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-group {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.logo-subtitle {
+  display: block;
+  width: 300px;
+  margin-top: -20px;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brand-name {
+  display: block;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }

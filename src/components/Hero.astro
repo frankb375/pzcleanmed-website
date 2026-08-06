@@ -1,22 +1,46 @@
-<section class="hero">
+---
+import heroTraining from '../assets/hero-training.jpg';
+---
+
+<section
+  class="hero"
+  style={`background-image:
+    linear-gradient(
+      90deg,
+      rgba(4, 18, 29, 0.98) 0%,
+      rgba(4, 18, 29, 0.9) 27%,
+      rgba(4, 18, 29, 0.64) 48%,
+      rgba(4, 18, 29, 0.2) 72%,
+      rgba(4, 18, 29, 0.06) 100%
+    ),
+    url(${heroTraining.src});`}
+>
   <div class="hero-inner">
     <p class="eyebrow">PZ Clean Medical Training</p>
 
-    <h1>We Prepare People to Respond Confidently When Emergencies Happen.</h1>
+    <h1>
+      We Prepare People<br />
+      to Respond
+    </h1>
+
+    <div class="hero-divider"></div>
+
+    <p class="hero-tagline">
+      Confidence Built Through Practice
+    </p>
 
     <p class="hero-copy">
-      Practical, evidence-based medical training for businesses, response
-      teams, healthcare professionals, schools, and outdoor organizations.
+      Professional medical education built on real-world military, clinical,
+      and emergency medicine experience.
     </p>
 
     <div class="hero-actions">
-      <a class="primary-button" href="#training">Explore Training Options</a>
+      <a class="primary-button" href="/training">
+        Explore Training Options
+      </a>
 
-      <a
-        class="secondary-button"
-        href="mailto:frank@pzcleanmed.com?subject=Training%20Inquiry"
-      >
-        Schedule Training
+      <a class="secondary-button" href="/contact">
+        Request Training
       </a>
     </div>
   </div>
