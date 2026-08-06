@@ -3,8 +3,9 @@ import '../styles/global.css';
 
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import TrainingSection from '../components/TrainingSection.astro';
 import AudienceSection from '../components/AudienceSection.astro';
+import TrainingSection from '../components/TrainingSection.astro';
+import PhilosophySection from '../components/PhilosophySection.astro';
 import WhyChooseSection from '../components/WhyChooseSection.astro';
 ---
 
@@ -12,20 +13,8 @@ import WhyChooseSection from '../components/WhyChooseSection.astro';
 
 <main>
   <Hero />
-  <TrainingSection />
   <AudienceSection />
+  <TrainingSection />
   <WhyChooseSection />
-
-  <section class="home-cta">
-    <div class="home-cta-inner">
-      <div>
-        <p>Bring Practical Training to Your Organization</p>
-        <h2>Prepare Your Team to Respond.</h2>
-      </div>
-
-      <a class="primary-button" href="/contact">
-        Request Training
-      </a>
-    </div>
-  </section>
+  <PhilosophySection />
 </main>
