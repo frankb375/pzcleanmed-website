@@ -1,54 +1,323 @@
 ---
 import '../styles/global.css';
+
 import Header from '../components/Header.astro';
+
+import tacticalMedicine from '../assets/tactical-medicine.jpg';
+import redCrossTraining from '../assets/red-cross-training.png';
+import wildernessMedicine from '../assets/wilderness-medicine.jpg';
+import occupationalHealth from '../assets/occupational-health-medicine.jpg';
+import customTraining from '../assets/custom-training-medicine.jpg';
 ---
 
 <Header />
 
-<main class="interior-page">
-  <section class="interior-hero">
-    <p class="page-label">Training Programs</p>
-    <h1>Practical Training for Real-World Emergencies</h1>
-    <p>
-      Explore medical training for workplaces, healthcare professionals,
-      response teams, schools, and outdoor organizations.
-    </p>
+<main class="training-page">
+
+  <!-- ===== PAGE HERO ===== -->
+
+  <section class="training-page-hero">
+    <div class="training-page-hero-inner">
+
+      <p class="training-page-label">
+        PZ Clean Medical Training
+      </p>
+
+      <h1>
+        Training Built for Real-World Performance
+      </h1>
+
+      <p class="training-page-intro">
+        Practical medical education designed to build skill, judgment,
+        and confidence for the environments where your people actually operate.
+      </p>
+
+      <a class="primary-button" href="/contact">
+        Request Training
+      </a>
+
+    </div>
   </section>
+
+
+  <!-- ===== TRAINING PROGRAMS ===== -->
+
+  <section class="training-programs-page">
+    <div class="training-page-container">
+
+      <div class="training-page-heading">
+        <p>Training Programs</p>
+        <h2>Choose the Training That Fits Your Mission</h2>
+      </div>
+
+
+      <!-- TACTICAL MEDICINE -->
+
+      <article class="program-feature">
+
+        <div
+          class="program-feature-image"
+          style={`background-image: url(${tacticalMedicine.src});`}
+        ></div>
+
+        <div class="program-feature-content">
+
+          <p class="program-number"></p>
+
+          <h2>Tactical Medicine</h2>
+
+          <p class="program-lead">
+            Medical training for high-risk, dynamic, and resource-limited
+            environments where rapid decisions and strong fundamentals matter.
+          </p>
+
+          <div class="program-topics">
+            <span>Trauma Care</span>
+            <span>Tactical Medicine</span>
+            <span>Austere Care</span>
+            <span>Scenario Training</span>
+          </div>
+
+          <p>
+            Programs can be adapted for law enforcement, public safety,
+            security teams, medical personnel, and organizations that need
+            practical trauma training beyond a traditional classroom setting.
+          </p>
+
+          <a class="program-link" href="/contact">
+            Discuss Tactical Training
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- AMERICAN RED CROSS -->
+
+      <article class="program-feature program-feature-reverse">
+
+        <div
+          class="program-feature-image"
+          style={`background-image: url(${redCrossTraining.src});`}
+        ></div>
+
+        <div class="program-feature-content">
+
+          <p class="program-number"></p>
+
+          <h2>American Red Cross Training</h2>
+
+          <p class="program-lead">
+            Recognized certification courses delivered with an emphasis on
+            practical skill development and confident emergency response.
+          </p>
+
+          <div class="program-topics">
+            <span>First Aid</span>
+            <span>CPR</span>
+            <span>AED</span>
+            <span>BLS</span>
+          </div>
+
+          <p>
+            Training is available for individuals, businesses, healthcare
+            professionals, schools, community organizations, and private groups.
+          </p>
+
+          <a class="program-link" href="/schedule">
+            View Training Schedule
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- WILDERNESS MEDICINE -->
+
+      <article class="program-feature">
+
+        <div
+          class="program-feature-image"
+          style={`background-image: url(${wildernessMedicine.src});`}
+        ></div>
+
+        <div class="program-feature-content">
+
+          <p class="program-number"></p>
+
+          <h2>Wilderness Medicine</h2>
+
+          <p class="program-lead">
+            Medical preparation for remote and austere environments where
+            definitive care may be delayed and resources are limited.
+          </p>
+
+          <div class="program-topics">
+            <span>Wilderness First Aid</span>
+            <span>Remote Medicine</span>
+            <span>Expedition Medicine</span>
+            <span>Evacuation Decisions</span>
+          </div>
+
+          <p>
+            Designed for outdoor professionals, guides, expedition teams,
+            search and rescue personnel, organizations, and individuals who
+            operate away from immediate medical support.
+          </p>
+
+          <a class="program-link" href="/contact">
+            Discuss Wilderness Training
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- OCCUPATIONAL HEALTH -->
+
+      <article class="program-feature program-feature-reverse">
+
+        <div
+          class="program-feature-image"
+          style={`background-image: url(${occupationalHealth.src});`}
+        ></div>
+
+        <div class="program-feature-content">
+
+          <p class="program-number"></p>
+
+          <h2>Occupational Health &amp; Preparedness</h2>
+
+          <p class="program-lead">
+            Workplace-focused medical training and emergency preparedness
+            designed around the hazards your organization actually faces.
+          </p>
+
+          <div class="program-topics">
+            <span>Workplace First Aid</span>
+            <span>Emergency Preparedness</span>
+            <span>Stop the Bleed</span>
+            <span>Response Planning</span>
+          </div>
+
+          <p>
+            Programs can support businesses, industrial teams, organizations,
+            and institutions seeking stronger internal emergency response
+            capability.
+          </p>
+
+          <a class="program-link" href="/contact">
+            Discuss Workplace Training
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- CUSTOM TRAINING -->
+
+      <article class="program-feature">
+
+        <div
+          class="program-feature-image"
+          style={`background-image: url(${customTraining.src});`}
+        ></div>
+
+        <div class="program-feature-content">
+
+          <p class="program-number"></p>
+
+          <h2>Custom Training Programs</h2>
+
+          <p class="program-lead">
+            When an off-the-shelf course does not fit your mission,
+            we can build training around your people, risks, and environment.
+          </p>
+
+          <div class="program-topics">
+            <span>Custom Curriculum</span>
+            <span>Scenario Development</span>
+            <span>Team Training</span>
+            <span>Mission-Specific Education</span>
+          </div>
+
+          <p>
+            Custom programs can combine medical education, scenario-based
+            practice, emergency preparedness, and operational considerations
+            into a training package tailored to your organization.
+          </p>
+
+          <a class="program-link" href="/contact">
+            Build a Custom Program
+          </a>
+
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ===== TRAINING APPROACH ===== -->
+
+  <section class="training-approach">
+    <div class="training-page-container">
+
+      <div class="training-page-heading training-heading-light">
+        <p>Our Approach</p>
+        <h2>Practice. Judgment. Confidence.</h2>
+      </div>
+
+      <div class="training-approach-grid">
+
+        <article>
+          <span></span>
+          <h3>Build Strong Fundamentals</h3>
+          <p>
+            Students first develop reliable core skills before adding
+            complexity.
+          </p>
+        </article>
+
+        <article>
+          <span></span>
+          <h3>Apply Skills in Context</h3>
+          <p>
+            Scenarios connect classroom knowledge to realistic problems and
+            environments.
+          </p>
+        </article>
+
+        <article>
+          <span></span>
+          <h3>Train for the Unexpected</h3>
+          <p>
+            The goal is confident decision-making when an emergency does not
+            follow the script.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FINAL CTA ===== -->
+
+  <section class="training-page-cta">
+    <div class="training-page-cta-inner">
+
+      <div>
+        <p>Need Something Different?</p>
+        <h2>Let's Build the Right Training for Your Team.</h2>
+      </div>
+
+      <a class="primary-button" href="/contact">
+        Request Training
+      </a>
+
+    </div>
+  </section>
+
 </main>
-
-<style>
-  .interior-page {
-    min-height: 70vh;
-  }
-
-  .interior-hero {
-    padding: 110px 24px;
-    color: #ffffff;
-    background: #0a2236;
-  }
-
-  .interior-hero > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .page-label {
-    margin-bottom: 14px;
-    color: #b9cbbd;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .interior-hero h1 {
-    margin-bottom: 24px;
-  }
-
-  .interior-hero p:last-child {
-    max-width: 700px;
-    font-size: 1.15rem;
-    line-height: 1.7;
-  }
-</style>

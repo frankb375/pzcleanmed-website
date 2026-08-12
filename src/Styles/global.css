@@ -594,3 +594,327 @@ nav {
     font-size: clamp(2.6rem, 13vw, 3.7rem);
   }
 }
+/* =========================================================
+   TRAINING PAGE
+   ========================================================= */
+
+.training-page {
+  background: var(--white);
+}
+
+
+/* ===== TRAINING PAGE HERO ===== */
+
+.training-page-hero {
+  padding: 110px 34px;
+  color: var(--white);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 23, 37, 0.98),
+      rgba(10, 34, 54, 0.92)
+    );
+}
+
+.training-page-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-page-label {
+  margin: 0 0 18px;
+  color: var(--orange);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.training-page-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.training-page-intro {
+  max-width: 760px;
+  margin: 28px 0 36px;
+  color: #e4edf2;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+
+/* ===== PAGE CONTAINER ===== */
+
+.training-page-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+/* ===== PAGE HEADINGS ===== */
+
+.training-page-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.training-page-heading p {
+  margin: 0 0 10px;
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.training-page-heading h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+
+/* ===== TRAINING PROGRAMS ===== */
+
+.training-programs-page {
+  padding: 100px 34px;
+  background: var(--cream);
+}
+
+.program-feature {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 500px;
+  margin-bottom: 55px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 12px 40px rgba(15, 47, 74, 0.1);
+}
+
+.program-feature-reverse .program-feature-image {
+  order: 2;
+}
+
+.program-feature-reverse .program-feature-content {
+  order: 1;
+}
+
+.program-feature-image {
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.program-feature-content {
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.program-number {
+  margin: 0 0 14px;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.program-feature-content h2 {
+  margin: 0 0 18px;
+  color: var(--navy-dark);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.program-lead {
+  margin: 0 0 24px;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.program-feature-content > p:not(.program-number):not(.program-lead) {
+  margin: 24px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.program-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.program-topics span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #edf1f3;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.program-link {
+  margin-top: 28px;
+  color: var(--orange);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+
+/* ===== TRAINING APPROACH ===== */
+
+.training-approach {
+  padding: 95px 34px;
+  color: var(--white);
+  background: var(--navy);
+}
+
+.training-heading-light p {
+  color: #b9cbbd;
+}
+
+.training-heading-light h2 {
+  color: var(--white);
+}
+
+.training-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.training-approach-grid article {
+  padding: 30px;
+  border-top: 4px solid var(--orange);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.training-approach-grid span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.training-approach-grid h3 {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+}
+
+.training-approach-grid p {
+  margin: 0;
+  color: #d7e2e9;
+  line-height: 1.65;
+}
+
+
+/* ===== TRAINING CTA ===== */
+
+.training-page-cta {
+  padding: 70px 34px;
+  background: var(--white);
+}
+
+.training-page-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.training-page-cta p {
+  margin: 0 0 10px;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.training-page-cta h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+
+/* ===== TRAINING PAGE TABLET ===== */
+
+@media (max-width: 1000px) {
+
+  .program-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .program-feature-reverse .program-feature-image,
+  .program-feature-reverse .program-feature-content {
+    order: initial;
+  }
+
+  .program-feature-image {
+    min-height: 380px;
+  }
+
+  .program-feature-content {
+    padding: 42px;
+  }
+
+  .training-approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== TRAINING PAGE MOBILE ===== */
+
+@media (max-width: 700px) {
+
+  .training-page-hero {
+    padding: 80px 24px;
+  }
+
+  .training-programs-page {
+    padding: 75px 20px;
+  }
+
+  .program-feature {
+    margin-bottom: 35px;
+  }
+
+  .program-feature-image {
+    min-height: 280px;
+  }
+
+  .program-feature-content {
+    padding: 32px 25px;
+  }
+
+  .training-approach {
+    padding: 75px 24px;
+  }
+
+  .training-page-cta {
+    padding: 60px 24px;
+  }
+
+  .training-page-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
