@@ -290,6 +290,13 @@ nav {
   text-align: center;
   background: var(--cream);
 }
+.audience-icon {
+  display: block;
+  width: 225px;
+  height: 225px;
+  margin: 0 auto -50px;
+  object-fit: contain;
+}
 
 .audience-card h3 {
   margin: 0 0 10px;
