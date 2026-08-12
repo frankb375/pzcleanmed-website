@@ -1,0 +1,188 @@
+<div class="training-calendar" id="training-calendar">
+
+  <div class="calendar-toolbar">
+    <button
+      class="calendar-nav-button calendar-nav-text"
+      id="calendar-prev"
+      type="button"
+      aria-label="Previous month"
+    >
+      Prev
+    </button>
+
+    <div class="calendar-title">
+      <p>Training Calendar</p>
+      <h3 id="calendar-month"></h3>
+    </div>
+
+    <button
+      class="calendar-nav-button calendar-nav-text"
+      id="calendar-next"
+      type="button"
+      aria-label="Next month"
+    >
+      Next
+    </button>
+  </div>
+
+  <div class="calendar-weekdays">
+    <span>Sun</span>
+    <span>Mon</span>
+    <span>Tue</span>
+    <span>Wed</span>
+    <span>Thu</span>
+    <span>Fri</span>
+    <span>Sat</span>
+  </div>
+
+  <div
+    class="calendar-grid"
+    id="calendar-grid"
+  ></div>
+
+  <div class="calendar-footer">
+
+    <div class="calendar-key">
+      <span class="calendar-key-dot"></span>
+      Scheduled public course
+    </div>
+
+    <a href="/contact" class="calendar-request-link">
+      Need another date? Request private training
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+  const calendarMonth = document.getElementById("calendar-month");
+  const calendarGrid = document.getElementById("calendar-grid");
+  const previousButton = document.getElementById("calendar-prev");
+  const nextButton = document.getElementById("calendar-next");
+
+  const trainingEvents = [];
+
+  let visibleDate = new Date();
+  visibleDate.setDate(1);
+
+  function renderCalendar() {
+    if (!calendarMonth || !calendarGrid) {
+      return;
+    }
+
+    const year = visibleDate.getFullYear();
+    const month = visibleDate.getMonth();
+
+    const monthName = visibleDate.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric"
+    });
+
+    calendarMonth.textContent = monthName;
+    calendarGrid.innerHTML = "";
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const previousMonthDays = new Date(year, month, 0).getDate();
+
+    for (let i = firstDay - 1; i >= 0; i--) {
+      const day = previousMonthDays - i;
+
+      const cell = document.createElement("div");
+      cell.className = "calendar-day calendar-day-muted";
+
+      const number = document.createElement("span");
+      number.className = "calendar-day-number";
+      number.textContent = String(day);
+
+      cell.appendChild(number);
+      calendarGrid.appendChild(cell);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const cell = document.createElement("div");
+      cell.className = "calendar-day";
+
+      const dateString =
+        `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+      const eventsForDay = trainingEvents.filter(
+        (event) => event.date === dateString
+      );
+
+      const today = new Date();
+
+      if (
+        day === today.getDate() &&
+        month === today.getMonth() &&
+        year === today.getFullYear()
+      ) {
+        cell.classList.add("calendar-day-today");
+      }
+
+      const number = document.createElement("span");
+      number.className = "calendar-day-number";
+      number.textContent = String(day);
+
+      cell.appendChild(number);
+
+      eventsForDay.forEach((event) => {
+        const eventLink = document.createElement("a");
+
+        eventLink.className = "calendar-event";
+        eventLink.href = event.href || "/contact";
+
+        const eventTitle = document.createElement("strong");
+        eventTitle.textContent = event.title;
+
+        const eventLocation = document.createElement("span");
+        eventLocation.textContent = event.location || "";
+
+        eventLink.appendChild(eventTitle);
+        eventLink.appendChild(eventLocation);
+        cell.appendChild(eventLink);
+      });
+
+      calendarGrid.appendChild(cell);
+    }
+
+    const totalCells = calendarGrid.children.length;
+
+    let targetCells = 42;
+
+    if (totalCells <= 35) {
+      targetCells = 35;
+    }
+
+    const remainingCells = targetCells - totalCells;
+
+    for (let day = 1; day <= remainingCells; day++) {
+      const cell = document.createElement("div");
+      cell.className = "calendar-day calendar-day-muted";
+
+      const number = document.createElement("span");
+      number.className = "calendar-day-number";
+      number.textContent = String(day);
+
+      cell.appendChild(number);
+      calendarGrid.appendChild(cell);
+    }
+  }
+
+  if (previousButton) {
+    previousButton.addEventListener("click", () => {
+      visibleDate.setMonth(visibleDate.getMonth() - 1);
+      renderCalendar();
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      visibleDate.setMonth(visibleDate.getMonth() + 1);
+      renderCalendar();
+    });
+  }
+
+  renderCalendar();
+</script>

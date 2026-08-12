@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import TrainingCalendar from '../components/TrainingCalendar.astro';
 ---
 
 <Header />
@@ -56,42 +57,7 @@ import Header from '../components/Header.astro';
 
       <!-- EMPTY / HOLDING STATE -->
 
-      <div class="schedule-empty-state">
-
-        <div class="schedule-empty-date">
-          <span class="schedule-calendar-month">Next</span>
-          <span class="schedule-calendar-day">—</span>
-        </div>
-
-        <div class="schedule-empty-content">
-
-          <p class="schedule-status">
-            New Courses Coming Soon
-          </p>
-
-          <h3>
-            No Public Courses Are Currently Posted
-          </h3>
-
-          <p>
-            We are building the upcoming training calendar now. If you need
-            training before a public course is posted, private and
-            organizational training may be available.
-          </p>
-
-          <div class="schedule-empty-actions">
-            <a class="schedule-link" href="/contact">
-              Request Training
-            </a>
-
-            <a class="schedule-link schedule-link-secondary" href="/training">
-              Explore Training Programs
-            </a>
-          </div>
-
-        </div>
-
-      </div>
+      <TrainingCalendar />
 
 
       <!--
@@ -172,7 +138,7 @@ import Header from '../components/Header.astro';
         <div class="private-training-options">
 
           <article>
-            <span>01</span>
+            <span></span>
             <div>
               <h3>Choose Your Training</h3>
               <p>
@@ -183,7 +149,7 @@ import Header from '../components/Header.astro';
           </article>
 
           <article>
-            <span>02</span>
+            <span></span>
             <div>
               <h3>Choose Your Location</h3>
               <p>
@@ -194,7 +160,7 @@ import Header from '../components/Header.astro';
           </article>
 
           <article>
-            <span>03</span>
+            <span></span>
             <div>
               <h3>Train Your Team Together</h3>
               <p>
@@ -225,7 +191,7 @@ import Header from '../components/Header.astro';
       <div class="schedule-type-grid">
 
         <a href="/training" class="schedule-type-card">
-          <span>01</span>
+          <span></span>
           <h3>Tactical Medicine</h3>
           <p>
             Trauma and medical training for dynamic and high-risk environments.
@@ -233,7 +199,7 @@ import Header from '../components/Header.astro';
         </a>
 
         <a href="/training" class="schedule-type-card">
-          <span>02</span>
+          <span></span>
           <h3>American Red Cross</h3>
           <p>
             First Aid, CPR, AED, and BLS certification training.
@@ -241,7 +207,7 @@ import Header from '../components/Header.astro';
         </a>
 
         <a href="/training" class="schedule-type-card">
-          <span>03</span>
+          <span></span>
           <h3>Wilderness Medicine</h3>
           <p>
             Medical preparedness for remote and austere environments.
@@ -249,7 +215,7 @@ import Header from '../components/Header.astro';
         </a>
 
         <a href="/training" class="schedule-type-card">
-          <span>04</span>
+          <span></span>
           <h3>Occupational Health</h3>
           <p>
             Workplace medical education and emergency preparedness.
@@ -257,7 +223,7 @@ import Header from '../components/Header.astro';
         </a>
 
         <a href="/training" class="schedule-type-card">
-          <span>05</span>
+          <span></span>
           <h3>Custom Programs</h3>
           <p>
             Mission-specific training developed around your organization.
