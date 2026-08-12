@@ -5,152 +5,795 @@ import Header from '../components/Header.astro';
 
 <Header />
 
-<main class="interior-page">
+<main class="contact-page">
 
-  <section class="interior-hero">
-  
-    <h1>Let's Discuss Your Training Needs</h1>
+  <!-- ===== HERO ===== -->
 
-    <p>
-      Whether you're looking for <strong>tactical medicine</strong>,
-      <strong>American Red Cross certification</strong>,
-      <strong>wilderness medicine</strong>,
-      <strong>occupational health training</strong>,
-      or a completely customized medical education program,
-      I'd be happy to discuss your organization's goals and
-      develop training tailored to your needs.
-    </p>
+  <section class="contact-hero">
+    <div class="contact-container contact-hero-inner">
 
-    <div class="contact-grid">
+      <p class="contact-label">Contact PZ Clean</p>
 
-      <div class="contact-card">
-        <h3>Email</h3>
-        <p>
-          <a href="mailto:frank@pzcleanmed.com">
-            frank@pzcleanmed.com
+      <h1>Let's Discuss Your Training Needs</h1>
+
+      <p class="contact-hero-copy">
+        Whether you need tactical medicine, American Red Cross certification,
+        wilderness medicine, occupational training, or a completely customized
+        program, tell us what you're trying to accomplish.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===== CONTACT / REQUEST FORM ===== -->
+
+  <section class="contact-main">
+    <div class="contact-container contact-main-grid">
+
+      <!-- LEFT COLUMN -->
+
+      <div class="contact-details">
+
+        <p class="contact-label">Start a Conversation</p>
+
+        <h2>
+          Tell Us What Your Team Needs
+        </h2>
+
+        <p class="contact-intro">
+          Training can be built around your personnel, environment, schedule,
+          and operational needs. You do not need to know exactly which course
+          you need before reaching out.
+        </p>
+
+
+        <div class="contact-detail-list">
+
+          <article class="contact-detail">
+            <div class="contact-detail-mark"></div>
+
+            <div>
+              <h3>Email</h3>
+
+              <a href="mailto:frank@pzcleanmed.com">
+                frank@pzcleanmed.com
+              </a>
+            </div>
+          </article>
+
+
+          <article class="contact-detail">
+            <div class="contact-detail-mark"></div>
+
+            <div>
+              <h3>Based in</h3>
+
+              <p>
+                Lacey, Washington
+              </p>
+            </div>
+          </article>
+
+
+          <article class="contact-detail">
+            <div class="contact-detail-mark"></div>
+
+            <div>
+              <h3>Training Availability</h3>
+
+              <p>
+                Washington, regional, nationwide, and select international
+                training opportunities.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="contact-detail">
+            <div class="contact-detail-mark"></div>
+
+            <div>
+              <h3>Response Time</h3>
+
+              <p>
+                Most inquiries receive a response within one business day.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+
+        <div class="contact-schedule-link">
+          <p>
+            Looking for an existing public course?
+          </p>
+
+          <a href="/schedule">
+            View the Training Schedule
           </a>
-        </p>
+        </div>
+
       </div>
 
-      <div class="contact-card">
-        <h3>Location</h3>
-        <p>
-          Lacey, Washington
-          <br />
-          Available throughout Washington and nationwide.
-        </p>
-      </div>
 
-      <div class="contact-card">
-        <h3>Response Time</h3>
-        <p>
-          Most inquiries receive a response within one business day.
-        </p>
+      <!-- RIGHT COLUMN / FORM -->
+
+      <div class="training-request-card">
+
+        <div class="request-card-heading">
+          <p>Training Request</p>
+          <h2>Tell Us About Your Needs</h2>
+        </div>
+
+
+        <form
+          id="training-request-form"
+          class="training-request-form"
+        >
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label for="name">Name *</label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+
+            <div class="form-field">
+              <label for="organization">Organization</label>
+
+              <input
+                id="organization"
+                name="organization"
+                type="text"
+                autocomplete="organization"
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label for="email">Email *</label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-field">
+            <label for="training-interest">Training Interest *</label>
+
+            <select
+              id="training-interest"
+              name="training-interest"
+              required
+            >
+              <option value="">Select an option</option>
+              <option value="Tactical Medicine">Tactical Medicine</option>
+              <option value="American Red Cross">
+                American Red Cross Training
+              </option>
+              <option value="Wilderness Medicine">
+                Wilderness Medicine
+              </option>
+              <option value="Occupational Health">
+                Occupational Health & Emergency Preparedness
+              </option>
+              <option value="Custom Training">
+                Custom Training Program
+              </option>
+              <option value="Not Sure">
+                Not Sure / Let's Discuss
+              </option>
+            </select>
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label for="group-size">Approximate Group Size</label>
+
+              <input
+                id="group-size"
+                name="group-size"
+                type="text"
+                placeholder="Example: 12-16"
+              />
+            </div>
+
+
+            <div class="form-field">
+              <label for="location">Preferred Location</label>
+
+              <input
+                id="location"
+                name="location"
+                type="text"
+                placeholder="City, state, facility, or TBD"
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-field">
+            <label for="timeframe">Preferred Date or Timeframe</label>
+
+            <input
+              id="timeframe"
+              name="timeframe"
+              type="text"
+              placeholder="Example: October 2026 or flexible"
+            />
+          </div>
+
+
+          <div class="form-field">
+            <label for="message">Tell Us About Your Training Needs *</label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              placeholder="Tell us about your audience, goals, environment, or any specific training requirements."
+              required
+            ></textarea>
+          </div>
+
+
+          <button
+            class="primary-button request-submit"
+            type="submit"
+          >
+            Send Training Request
+          </button>
+
+
+          <p class="request-form-note">
+            Submitting this form will open your email application with the
+            training request prepared for you to send.
+          </p>
+
+        </form>
+
       </div>
 
     </div>
+  </section>
 
-    <div class="contact-buttons">
+
+  <!-- ===== WHAT HAPPENS NEXT ===== -->
+
+  <section class="contact-next">
+    <div class="contact-container">
+
+      <div class="contact-next-heading">
+        <p class="contact-label">What Happens Next</p>
+
+        <h2>
+          From Training Request to Training Day
+        </h2>
+      </div>
+
+
+      <div class="contact-next-grid">
+
+        <article>
+          <div class="contact-step-icon"></div>
+
+          <h3>Tell Us What You Need</h3>
+
+          <p>
+            Share your audience, goals, preferred dates, location, and any
+            specific training requirements.
+          </p>
+        </article>
+
+
+        <article>
+          <div class="contact-step-icon"></div>
+
+          <h3>We'll Build the Plan</h3>
+
+          <p>
+            We'll discuss the appropriate course, training format, logistics,
+            and any customization your organization may need.
+          </p>
+        </article>
+
+
+        <article>
+          <div class="contact-step-icon"></div>
+
+          <h3>Train With Purpose</h3>
+
+          <p>
+            Your team receives practical, hands-on education designed around
+            the environment where the skills may actually be needed.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FINAL CTA ===== -->
+
+  <section class="contact-final">
+    <div class="contact-container contact-final-inner">
+
+      <div>
+        <p>Prefer Email?</p>
+
+        <h2>
+          Reach Out Directly.
+        </h2>
+      </div>
 
       <a
         class="primary-button"
-        href="mailto:frank@pzcleanmed.com?subject=Training%20Request"
+        href="mailto:frank@pzcleanmed.com?subject=PZ%20Clean%20Training%20Inquiry"
       >
-        Request Training
-      </a>
-
-      <a
-        class="secondary-button"
-        href="mailto:frank@pzcleanmed.com"
-      >
-        Contact PZ Clean
+        Email PZ Clean
       </a>
 
     </div>
-
   </section>
 
 </main>
 
+
+<script>
+  const form = document.getElementById("training-request-form");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const name = formData.get("name") || "";
+    const organization = formData.get("organization") || "";
+    const email = formData.get("email") || "";
+    const phone = formData.get("phone") || "";
+    const trainingInterest = formData.get("training-interest") || "";
+    const groupSize = formData.get("group-size") || "";
+    const location = formData.get("location") || "";
+    const timeframe = formData.get("timeframe") || "";
+    const message = formData.get("message") || "";
+
+    const subject = `PZ Clean Training Request - ${trainingInterest}`;
+
+    const body = [
+      "PZ Clean Training Request",
+      "",
+      `Name: ${name}`,
+      `Organization: ${organization}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      "",
+      `Training Interest: ${trainingInterest}`,
+      `Approximate Group Size: ${groupSize}`,
+      `Preferred Location: ${location}`,
+      `Preferred Date / Timeframe: ${timeframe}`,
+      "",
+      "Training Needs:",
+      `${message}`
+    ].join("\n");
+
+    const mailto =
+      `mailto:frank@pzcleanmed.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+  });
+</script>
+
+
 <style>
-  .interior-page {
-    min-height: 70vh;
+  .contact-page {
+    background: #ffffff;
   }
 
-  .interior-hero {
-    padding: 110px 24px;
-    color: #ffffff;
-    background: #0a2236;
+  .contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .interior-hero > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .page-label {
-    margin-bottom: 14px;
-    color: #b9cbbd;
+  .contact-label {
+    margin: 0 0 14px;
+    color: #e97716;
     font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+
+  /* ===== HERO ===== */
+
+  .contact-hero {
+    padding: 115px 34px 120px;
+    color: #ffffff;
+    background:
+      linear-gradient(
+        135deg,
+        #071d2e 0%,
+        #0a2236 50%,
+        #0f2f4a 100%
+      );
+  }
+
+  .contact-hero-inner {
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: clamp(3.2rem, 6vw, 5.4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .contact-hero-copy {
+    max-width: 760px;
+    margin: 28px auto 0;
+    color: #e2ebf0;
+    font-size: 1.18rem;
+    line-height: 1.75;
+  }
+
+
+  /* ===== MAIN CONTACT SECTION ===== */
+
+  .contact-main {
+    padding: 100px 34px;
+    background: #f6f3ed;
+  }
+
+  .contact-main-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-details h2 {
+    max-width: 500px;
+    margin: 0;
+    color: #0a2236;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    line-height: 1.05;
+  }
+
+  .contact-intro {
+    max-width: 540px;
+    margin: 24px 0 38px;
+    color: #5f6871;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+
+  /* ===== CONTACT DETAILS ===== */
+
+  .contact-detail-list {
+    border-top: 1px solid #d7d8d5;
+  }
+
+  .contact-detail {
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 16px;
+    border-bottom: 1px solid #d7d8d5;
+  }
+
+  .contact-detail-mark {
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: #e97716;
+  }
+
+  .contact-detail h3 {
+    margin: 0 0 5px;
+    color: #0a2236;
+    font-size: 0.95rem;
+  }
+
+  .contact-detail p,
+  .contact-detail a {
+    margin: 0;
+    color: #5f6871;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .contact-detail a {
+    color: #0f2f4a;
+    font-weight: 700;
+  }
+
+  .contact-schedule-link {
+    margin-top: 34px;
+    padding: 22px;
+    border-left: 4px solid #e97716;
+    background: #ffffff;
+  }
+
+  .contact-schedule-link p {
+    margin: 0 0 7px;
+    color: #5f6871;
+    font-size: 0.88rem;
+  }
+
+  .contact-schedule-link a {
+    color: #e97716;
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+
+  /* ===== FORM CARD ===== */
+
+  .training-request-card {
+    padding: 48px;
+    border-top: 5px solid #e97716;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 14px 42px rgba(15, 47, 74, 0.1);
+  }
+
+  .request-card-heading {
+    margin-bottom: 34px;
+  }
+
+  .request-card-heading p {
+    margin: 0 0 8px;
+    color: #35533c;
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .interior-hero h1 {
-    margin-bottom: 50px;
+  .request-card-heading h2 {
+    margin: 0;
+    color: #0a2236;
+    font-size: 2rem;
   }
 
-.interior-hero p:last-of-type {
-  max-width: 700px;
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
+  .training-request-form {
+    display: grid;
+    gap: 22px;
+  }
 
-  .contact-button {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 14px 22px;
-    border-radius: 6px;
-    background: #e97716;
-    color: #ffffff;
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-field label {
+    color: #17212b;
+    font-size: 0.82rem;
     font-weight: 800;
   }
 
-  .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 70px;
-}
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    border: 1px solid #d2d8dc;
+    border-radius: 6px;
+    padding: 13px 14px;
+    color: #17212b;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
 
-.contact-card {
-  padding: 28px;
-  border-radius: 10px;
-  background: rgba(255,255,255,.08);
-  text-align: center;
-}
+  .form-field textarea {
+    resize: vertical;
+  }
 
-.contact-card h3 {
-  margin-bottom: 18px;
-}
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: #e97716;
+    box-shadow: 0 0 0 3px rgba(233, 119, 22, 0.12);
+  }
 
-.contact-card p {
-  margin: 0;
-  line-height: 1.7;
-}
+  .request-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
 
-.contact-card a {
-  color: white;
-  font-weight: 700;
-}
+  .request-form-note {
+    margin: -4px 0 0;
+    color: #7a8288;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    text-align: center;
+  }
 
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 60px;
-  flex-wrap: wrap;
-}
+
+  /* ===== WHAT HAPPENS NEXT ===== */
+
+  .contact-next {
+    padding: 95px 34px;
+    color: #ffffff;
+    background: #0f2f4a;
+  }
+
+  .contact-next-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+
+  .contact-next-heading h2 {
+    margin: 0;
+    font-size: clamp(2.3rem, 4vw, 3.7rem);
+    line-height: 1.08;
+  }
+
+  .contact-next-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .contact-next-grid article {
+    padding: 30px;
+    border-top: 4px solid #e97716;
+    background: rgba(255, 255, 255, 0.055);
+  }
+
+  .contact-step-icon {
+    width: 36px;
+    height: 5px;
+    margin-bottom: 24px;
+    background: #e97716;
+  }
+
+  .contact-next-grid h3 {
+    margin: 0 0 12px;
+    font-size: 1.18rem;
+  }
+
+  .contact-next-grid p {
+    margin: 0;
+    color: #d7e2e9;
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+
+  /* ===== FINAL CTA ===== */
+
+  .contact-final {
+    padding: 70px 34px;
+    color: #ffffff;
+    background: #0a2236;
+  }
+
+  .contact-final-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .contact-final p {
+    margin: 0 0 8px;
+    color: #e97716;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .contact-final h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+
+  /* ===== TABLET ===== */
+
+  @media (max-width: 950px) {
+    .contact-main-grid {
+      grid-template-columns: 1fr;
+      gap: 55px;
+    }
+
+    .contact-next-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  /* ===== MOBILE ===== */
+
+  @media (max-width: 650px) {
+    .contact-hero {
+      padding: 80px 22px;
+    }
+
+    .contact-main {
+      padding: 70px 20px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .training-request-card {
+      padding: 32px 22px;
+    }
+
+    .contact-next {
+      padding: 70px 22px;
+    }
+
+    .contact-final {
+      padding: 58px 22px;
+    }
+
+    .contact-final-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 </style>
