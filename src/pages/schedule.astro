@@ -5,50 +5,288 @@ import Header from '../components/Header.astro';
 
 <Header />
 
-<main class="interior-page">
-  <section class="interior-hero">
-    <p class="page-label">Schedule Training</p>
-    <h1>Find a Class or Request Private Training</h1>
-    <p>
-      Public course dates, private group training, and custom course requests
-      will be available here.
-    </p>
+<main class="schedule-page">
+
+  <!-- ===== PAGE HERO ===== -->
+
+  <section class="schedule-hero">
+    <div class="schedule-hero-inner">
+
+      <p class="schedule-label">Schedule Training</p>
+
+      <h1>
+        Find a Course or Bring Training to Your Team
+      </h1>
+
+      <p class="schedule-intro">
+        Browse upcoming public courses or request private training designed
+        around your organization, personnel, and operational needs.
+      </p>
+
+      <div class="schedule-hero-actions">
+        <a class="primary-button" href="#upcoming">
+          View Upcoming Courses
+        </a>
+
+        <a class="secondary-button" href="#private-training">
+          Request Private Training
+        </a>
+      </div>
+
+    </div>
   </section>
+
+
+  <!-- ===== UPCOMING COURSES ===== -->
+
+  <section class="upcoming-courses" id="upcoming">
+    <div class="schedule-container">
+
+      <div class="schedule-section-heading">
+        <p>Upcoming Courses</p>
+        <h2>Public Training Opportunities</h2>
+
+        <p class="schedule-section-copy">
+          Public course dates will be posted here as they become available.
+          Registration details, course location, and availability will be
+          included with each listing.
+        </p>
+      </div>
+
+
+      <!-- EMPTY / HOLDING STATE -->
+
+      <div class="schedule-empty-state">
+
+        <div class="schedule-empty-date">
+          <span class="schedule-calendar-month">Next</span>
+          <span class="schedule-calendar-day">—</span>
+        </div>
+
+        <div class="schedule-empty-content">
+
+          <p class="schedule-status">
+            New Courses Coming Soon
+          </p>
+
+          <h3>
+            No Public Courses Are Currently Posted
+          </h3>
+
+          <p>
+            We are building the upcoming training calendar now. If you need
+            training before a public course is posted, private and
+            organizational training may be available.
+          </p>
+
+          <div class="schedule-empty-actions">
+            <a class="schedule-link" href="/contact">
+              Request Training
+            </a>
+
+            <a class="schedule-link schedule-link-secondary" href="/training">
+              Explore Training Programs
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!--
+        FUTURE COURSE CARD EXAMPLE
+
+        When you're ready to publish an actual course,
+        we can duplicate this structure and change the information.
+
+      <article class="course-event">
+
+        <div class="course-date">
+          <span class="course-month">SEP</span>
+          <span class="course-day">12</span>
+        </div>
+
+        <div class="course-event-content">
+
+          <div class="course-event-topline">
+            <span class="course-type">American Red Cross</span>
+            <span class="course-availability">Seats Available</span>
+          </div>
+
+          <h3>Adult & Pediatric First Aid / CPR / AED</h3>
+
+          <div class="course-meta">
+            <span>Lacey, Washington</span>
+            <span>8:00 AM – 1:00 PM</span>
+          </div>
+
+          <p>
+            Hands-on American Red Cross certification training covering
+            first aid, CPR, and AED skills.
+          </p>
+
+          <a class="primary-button" href="/contact">
+            Register
+          </a>
+
+        </div>
+
+      </article>
+      -->
+
+    </div>
+  </section>
+
+
+  <!-- ===== PRIVATE TRAINING ===== -->
+
+  <section class="private-training" id="private-training">
+    <div class="schedule-container">
+
+      <div class="private-training-grid">
+
+        <div class="private-training-intro">
+
+          <p class="schedule-label">
+            Private & Organizational Training
+          </p>
+
+          <h2>
+            Training Built Around Your Team
+          </h2>
+
+          <p>
+            If a public course does not fit your schedule or mission,
+            PZ Clean can work with your organization to coordinate private,
+            on-site, or customized training.
+          </p>
+
+          <a class="primary-button" href="/contact">
+            Request Private Training
+          </a>
+
+        </div>
+
+
+        <div class="private-training-options">
+
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Choose Your Training</h3>
+              <p>
+                Select an existing course or discuss a program tailored to
+                your organization's needs.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Choose Your Location</h3>
+              <p>
+                Training can be coordinated at your workplace, facility,
+                training site, or another appropriate location.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Train Your Team Together</h3>
+              <p>
+                Build shared skills and confidence through hands-on instruction
+                designed around your personnel and environment.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== TRAINING TYPES ===== -->
+
+  <section class="schedule-training-types">
+    <div class="schedule-container">
+
+      <div class="schedule-section-heading">
+        <p>Available Programs</p>
+        <h2>Training Across Multiple Environments</h2>
+      </div>
+
+      <div class="schedule-type-grid">
+
+        <a href="/training" class="schedule-type-card">
+          <span>01</span>
+          <h3>Tactical Medicine</h3>
+          <p>
+            Trauma and medical training for dynamic and high-risk environments.
+          </p>
+        </a>
+
+        <a href="/training" class="schedule-type-card">
+          <span>02</span>
+          <h3>American Red Cross</h3>
+          <p>
+            First Aid, CPR, AED, and BLS certification training.
+          </p>
+        </a>
+
+        <a href="/training" class="schedule-type-card">
+          <span>03</span>
+          <h3>Wilderness Medicine</h3>
+          <p>
+            Medical preparedness for remote and austere environments.
+          </p>
+        </a>
+
+        <a href="/training" class="schedule-type-card">
+          <span>04</span>
+          <h3>Occupational Health</h3>
+          <p>
+            Workplace medical education and emergency preparedness.
+          </p>
+        </a>
+
+        <a href="/training" class="schedule-type-card">
+          <span>05</span>
+          <h3>Custom Programs</h3>
+          <p>
+            Mission-specific training developed around your organization.
+          </p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FINAL CTA ===== -->
+
+  <section class="schedule-cta">
+
+    <div class="schedule-cta-inner">
+
+      <div>
+        <p>Don't See What You Need?</p>
+        <h2>Let's Build the Right Training Schedule.</h2>
+      </div>
+
+      <a class="primary-button" href="/contact">
+        Contact PZ Clean
+      </a>
+
+    </div>
+
+  </section>
+
 </main>
-
-<style>
-  .interior-page {
-    min-height: 70vh;
-  }
-
-  .interior-hero {
-    padding: 110px 24px;
-    color: #ffffff;
-    background: #0a2236;
-  }
-
-  .interior-hero > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .page-label {
-    margin-bottom: 14px;
-    color: #b9cbbd;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .interior-hero h1 {
-    margin-bottom: 24px;
-  }
-
-  .interior-hero p:last-child {
-    max-width: 700px;
-    font-size: 1.15rem;
-    line-height: 1.7;
-  }
-</style>
