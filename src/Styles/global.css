@@ -2086,3 +2086,32 @@ nav {
     text-align: center;
   }
 }
+/* ===== CLICKABLE HOME TRAINING CARDS ===== */
+
+.training-card {
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.training-card .training-content a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.training-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 47, 74, 0.16);
+}
+
+.training-card:focus-within {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.program-feature {
+  scroll-margin-top: 40px;
+}
