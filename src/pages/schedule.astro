@@ -1,12 +1,13 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 import TrainingCalendar from '../components/TrainingCalendar.astro';
 ---
 
-<Header />
-
-<main class="schedule-page">
+<Layout
+  title="Schedule Training | PZ Clean Medical Training"
+  description="View upcoming medical training courses or request private training tailored to your organization, personnel, and operational needs."
+>
+  <main class="schedule-page">
 
   <!-- ===== PAGE HERO ===== -->
 
@@ -256,3 +257,4 @@ import TrainingCalendar from '../components/TrainingCalendar.astro';
   </section>
 
 </main>
+</Layout>

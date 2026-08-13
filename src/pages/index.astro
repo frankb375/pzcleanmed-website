@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 
-import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import AudienceSection from '../components/AudienceSection.astro';
 import TrainingSection from '../components/TrainingSection.astro';
@@ -9,12 +8,15 @@ import PhilosophySection from '../components/PhilosophySection.astro';
 import WhyChooseSection from '../components/WhyChooseSection.astro';
 ---
 
-<Header />
-
-<main>
-  <Hero />
-  <AudienceSection />
-  <TrainingSection />
-  <WhyChooseSection />
-  <PhilosophySection />
-</main>
+<Layout
+  title="PZ Clean Medical Training | Medical Training & Emergency Preparedness"
+  description="Practical medical training designed to build confidence, judgment, and real-world emergency response skills."
+>
+  <main>
+    <Hero />
+    <AudienceSection />
+    <TrainingSection />
+    <WhyChooseSection />
+    <PhilosophySection />
+  </main>
+</Layout>

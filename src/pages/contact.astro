@@ -1,11 +1,12 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Header />
-
-<main class="contact-page">
+<Layout
+  title="Contact | PZ Clean Medical Training"
+  description="Contact PZ Clean Medical Training to discuss certification courses, tactical medicine, wilderness medicine, occupational training, or a customized program."
+>
+  <main class="contact-page">
 
   <!-- ===== HERO ===== -->
 
@@ -375,6 +376,7 @@ import Header from '../components/Header.astro';
   </section>
 
 </main>
+</Layout>
 
 
 <script>

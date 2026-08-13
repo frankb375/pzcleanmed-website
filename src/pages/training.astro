@@ -1,7 +1,5 @@
 ---
-import '../styles/global.css';
-
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 
 import tacticalMedicine from '../assets/tactical-medicine.jpg';
 import redCrossTraining from '../assets/red-cross-training.png';
@@ -10,9 +8,11 @@ import occupationalHealth from '../assets/occupational-health-medicine.jpg';
 import customTraining from '../assets/custom-training-medicine.jpg';
 ---
 
-<Header />
-
-<main class="training-page">
+<Layout
+  title="Training Programs | PZ Clean Medical Training"
+  description="Explore tactical medicine, American Red Cross certification, wilderness medicine, occupational health, and customized medical training programs."
+>
+  <main class="training-page">
 
   <!-- ===== PAGE HERO ===== -->
 
@@ -321,3 +321,4 @@ import customTraining from '../assets/custom-training-medicine.jpg';
   </section>
 
 </main>
+</Layout>
